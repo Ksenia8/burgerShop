@@ -1,0 +1,47 @@
+.feature__desc {
+    text-align: center;
+
+        @include phones {
+            text-align: left; 
+            padding: 0 5%;
+        }
+}
+
+.feature__pic {
+    display: flex;
+    justify-content: center;
+
+    @include phones {
+        margin-bottom: 0;
+    }
+}
+
+.feature__title {
+    font-family: "Lifehack";
+    font-size: rem(24px);
+    font-weight: 500;
+    margin-bottom: rem(10px);
+}
+
+.feature__text {
+    font-size: rem(14px);
+    font-weight: 300;
+    color:$grey;
+    opacity: 0.8;
+    line-height: 1.5;
+}
+
+.meat-icon {
+    width: rem(57px);
+    height: rem(89px);
+}
+
+.hand-icon {
+    width: rem(49px);
+    height: rem(85px);
+}
+
+.natural-icon {
+    width: rem(58px);
+    height: rem(75px);
+}

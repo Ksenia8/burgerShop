@@ -1,0 +1,174 @@
+.menu__block {
+    background: url("../images/menu/menu.jpg") 50% no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.menu__title {
+    position: absolute;
+    top: 15.5%;
+    left: 8.5%;
+}
+
+.menu-acco {
+    display: flex;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    @include phones {
+        justify-content: flex-end;
+        width: 100%;
+    }
+
+    @include phones {
+        justify-content: flex-end;
+        width: 100%;
+    }
+}
+
+.menu-acco__item {
+    position: relative;
+    display: flex;
+    z-index: 10;
+
+    @include phones {
+        .menu-acco__item.active {
+            z-index: 20;
+            position: absolute;
+            width: 100%;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+    }
+}
+
+.menu-acco__item.active .menu-acco__trigger-text {
+    color: #f9b43b;
+}
+
+.menu-acco__item.active .menu-acco__text {
+    transform: translate(0);
+    opacity: 1;
+}
+
+.menu-acco__item.active .menu-acco__dec {
+    position: absolute;
+    opacity: 0.8;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    display: block;
+    z-index: -10;
+
+    @include phones {
+        right: rem(130px);
+    }
+}
+
+.menu-acco__item.active .menu-acco__dec .menu-acco__trigger-text {
+    color: #fff;
+}
+
+.menu-acco__item.active .menu-acco__close {
+    @include phones {
+        display: block;
+        text-align: right;
+    }
+}
+
+.menu-acco__item.active .menu-acco__content {
+    max-width: rem(337.5px);
+    flex: 1;
+
+    @include tablets {
+        max-width: rem(331.3px);
+    }
+}
+
+.menu-acco__trigger {
+    width: 5rem;
+    background-size: cover;
+    position: relative;
+}
+
+.menu-acco__trigger::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(20, 20, 20, 0.7);
+}
+
+.menu-acco__trigger_m {
+    background-position: center;
+}
+
+.menu-acco__trigger_v {
+    background-position-x: 160px;
+}
+
+.menu-acco__trigger_d {
+    background-position: right;
+}
+
+.menu-acco__trigger {
+    @include tablets {
+        min-width: rem(60px);
+    }
+
+    @include phones {
+        min-width: rem(50px);
+    }
+}
+
+.menu-acco__dec {
+    display: none;
+}
+
+.menu-acco__trigger-text {
+    font-size: 2.5rem;
+    color: #fff;
+    white-space: nowrap;
+    position: absolute;
+    transform: rotate(-90deg) translateY(-50%);
+    transform-origin: 0 0;
+    left: 50%;
+    bottom: -3%;
+    font-size: rem(40px);
+	color: #fff;
+	font-family: "Gagalin";
+	text-align: center;
+}
+
+.menu-acco__content {
+    background: rgba(47, 50, 52, 0.93);
+    max-width: 0;
+    overflow: hidden;
+    transition: max-width 1s;
+}
+
+.menu-acco__close {
+    display: none;
+}
+
+.menu-acco__text {
+    font-family: 'Ubuntu', Helvetica, sans-serif;
+    font-weight: 300;
+    line-height: 1.76em;
+    font-size: .875rem;
+    color: #fff;
+    padding: 3.4375rem 2.125rem;
+    opacity: 0;
+    transform: translate(200%);
+    transition: transform 1s, opacity 3s;
+
+    @include phones {
+        padding: 1.5625rem .9375rem;
+    }
+}

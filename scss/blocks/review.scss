@@ -1,0 +1,57 @@
+.review {
+    position: relative;
+    filter: grayscale(100%);
+
+    &:hover {
+        .review__hover {
+            opacity: 1;
+        }
+    }
+}
+
+.review__hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(#000, .8);
+    padding: 10% 12% 0;
+    color: $white;
+    opacity: 0;
+    transition: opacity .3s;
+
+    @include tablets {
+        padding: 10% 12% 0;
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 1;
+        align-items: center;
+    }
+}
+.review__avatar {
+    object-fit: cover;
+    width: $width;
+    height: $height;
+}
+
+.review__title {
+    font-family: "Gagalin";
+    @include font (14px, 400);
+    line-height: rem(28.11px);
+    text-transform: uppercase;
+
+    @include phones {
+        font-size: rem(24px);
+        text-align: center;
+    }
+}
+
+.review__text {
+    @include font (rem(14px), 300);
+    line-height: rem(24px);
+
+    @include tablets {
+        display: none;
+    }
+}

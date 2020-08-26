@@ -1,0 +1,52 @@
+.page-nav {
+    position: fixed;
+    z-index: 100;
+    top: 50%;
+    transform: translateY(-50%);
+    right: rem(40px);
+
+    @include tablets {
+        display: none;
+    }
+}
+
+.page-nav__item {
+    margin: rem(5px);
+    position: relative;
+
+    &.active {
+        .page-nav__link {
+        border: 1px solid lighten($color: white, $amount: 5%);
+        }
+    }
+}
+
+.page-nav__link {
+    display: block;
+    border: 1px solid transparent;
+    position: relative;
+    width: rem(16px);
+    height: rem(16px);
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 10em;
+    transition: 0.3s;
+  
+    &::after {
+        content: "";
+        border-radius: 50%;
+        position: absolute;
+        height: rem(6px);
+        width: rem(6px);
+        border: 0;
+        background: lighten($color:white, $amount: 5%);
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 0.1s ease-in-out;
+    }
+  
+    &:hover {
+        border: 1px solid lighten($color:white, $amount: 5%);
+    }
+}

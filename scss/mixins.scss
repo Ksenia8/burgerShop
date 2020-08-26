@@ -1,0 +1,22 @@
+@mixin flex ($justify-content: space-between, $align-items: center) {
+    display: flex;
+    justify-content: $justify-content;
+    align-items:$align-items;
+}
+
+@mixin font ($font-size: rem(14px), $font-weight: 500) {
+    font-size: $font-size;
+    font-weight: $font-weight;
+}
+
+%clearfix {
+	&:before,
+	&:after {
+		content: "";
+		display: table;
+	}
+
+	&:after {
+		clear: both;
+	}
+}

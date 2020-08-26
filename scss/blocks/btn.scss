@@ -1,0 +1,38 @@
+.btn {
+    padding: rem(10px) rem(15px);
+    border-radius: rem(5px);
+    text-transform: uppercase;
+    color: $white;
+    @include font (rem(13px));
+    display: inline-block;
+    text-decoration: none;
+    border: none;
+
+    &--red {
+        background-color: $red;
+    
+        &:hover {
+            background-color: #c1401e;
+        }
+    
+        &:focus {
+            outline: 2px solid darken($red, 10%);
+        }
+    }
+
+    &--bg-black {
+        background-color: #2f3234;
+
+        &:hover {
+            background-color: #1f2122;  
+        }
+
+        &:focus {
+            outline: 2px solid darken($grey, 10%);
+        }
+    }
+
+    &--review {
+        margin-top: 10%;
+    }
+}

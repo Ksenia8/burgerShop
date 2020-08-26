@@ -1,0 +1,23 @@
+.reviews__list {
+    height: $height;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.reviews__item {
+    width: 25%;
+    height: 50%;
+
+    @include tablets {
+        width: 50%;
+        height: 25%;
+    }
+}
+
+.reviews__image img {
+    max-width: 100%;
+}
+
+.reviews__image {
+    height: 100%;
+}

@@ -1,0 +1,236 @@
+.burgers {
+    background-image: linear-gradient(to top, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%, #f9b43b 100%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 6%;
+    flex-direction: row;
+    position: relative;
+}
+
+.slide__container {
+    display: flex;
+}
+
+.burger__items {
+    display: flex;
+}
+
+.burger__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 rem(50px);
+    
+    @include tablets {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 0;
+    }
+}
+
+.arrow-left {
+    transform: rotate(90deg);
+}
+
+.arrow-right {
+    transform: rotate(-90deg);
+}
+
+.burger-slide {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.burger__images {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-right: 2%;
+    align-items: center;
+    
+
+    &--content {
+        position: absolute;
+        top: 5%;
+        left: 6%;
+        width: rem(90px);
+        height: rem(90px);
+    }
+
+    &--kkal {
+        position: absolute;
+        top: 100%;
+        left: 7%;    
+        width: rem(60px);
+        height: rem(60px);
+
+        @include tablets {
+            top: 10%;
+            left: 80%;
+        }
+    }
+
+    &--slide {
+        width: 75%;
+
+        @include tablets {
+            width: 50%;
+        }
+    }
+    
+    &--slide img {
+        max-width: 100%;
+    }
+}
+
+.burger-icon {
+    width: rem(46px);
+    height: rem(44px);
+    position: absolute;
+    top: 15%;
+    right: 25%;
+}
+
+.sostav__box {
+    width: rem(90px);
+    height: rem(90px);
+    background-color: #e35028;
+    border-radius: 5px;
+    opacity: 0.4;
+    position: relative;
+}
+
+.sostav__title {
+    font-family: "Gagalin";
+    font-size: rem(14px);
+    font-weight: 400;
+    line-height: rem(28.11px);
+    color: $white;
+    position: absolute;
+    top: 60%;
+    left: 25%;
+}
+
+.kall-icon {
+    width: rem(60px);
+    height: rem(60px);
+    opacity: 0.5;
+}
+
+.kkal__title {
+    opacity: 0.5;
+    color: $white;
+    font-family: "Gagalin";
+    font-size: rem(14px);
+    font-weight: 400;
+    line-height: rem(24px);
+    position: relative;
+
+    &--number {
+        position: absolute;
+        top: 45%;
+        font-size: rem(20px);
+        font-weight: 400;
+        line-height: rem(24px);
+    }
+}
+
+.kkal__box {
+    width: rem(60px);
+    height: rem(60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.arrow-left .scroll-icon {
+    transform: rotate(90deg);
+}
+
+.arrow-right .scroll-icon {
+    transform: rotate(-90deg);
+}
+
+.burger__content {
+    @include tablets {
+        padding: 0 10%;
+    }
+}
+
+.burger__content p {
+    color: $white;
+    font-family: "Ubuntu";
+    font-size: rem(14px);
+    font-weight: 300;
+    line-height: rem(23.97px);
+
+    @include tablets {
+        text-align: center;
+    }
+}
+
+.burger__price {
+    display: flex;
+    flex-direction: row;
+    padding-top: 10%;
+
+    @include tablets {
+        padding-top: 5%;
+    }
+}
+
+.price__title {
+    color: $red;
+    font-family: "Gagalin";
+    font-size: rem(72px);
+    font-weight: 400;
+    line-height: rem(28.08px);
+
+    @include tablets {
+        
+        font-size: rem(50px);
+    }
+
+    &::after {
+        content: " рублей";
+        color: $red;
+        font-family: "Gagalin";
+        font-size: rem(30px);
+        font-weight: 400;
+        line-height: rem(28.08px);
+    }
+}
+
+.burger__desc {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 6%;
+    width: 100%;
+
+    @include tablets {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding-top: 0;
+    }
+}
+
+.owl-carousel {
+    width: 100%;
+    position: relative;
+}
+.owl-next {
+    right: 0;
+    position: absolute;
+    top: 50%;
+}
+
+.owl-prev {
+    position: absolute;
+    top: 50%;
+    border: none;
+}

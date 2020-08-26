@@ -1,0 +1,13 @@
+.down-arrow {
+    display: block;
+    position: absolute;
+    bottom: rem(40px);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.scroll-icon {
+    width: rem(40px);
+    height: rem(15px);
+    fill: $white;
+}

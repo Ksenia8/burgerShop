@@ -1,0 +1,65 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    background-color: rgba(47, 50, 52, 0.92);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000000;
+}
+  
+.overlay__container {
+    position: relative;
+    width: rem(460px);
+    background-color: #fff;
+    border-radius: rem(6px);
+    padding: rem(20px);
+    color: #fff;
+}
+  
+.overlay__title {
+    margin-bottom: rem(20px);
+    color: black;
+}
+  
+.overlay__text {
+    line-height: rem(24px);
+    width: 100%;
+    color: black;
+    font-weight: 300;
+}
+  
+.overlay__close img {
+    cursor: pointer;
+    color: red;
+    position: absolute;
+    top: rem(20px);
+    right: rem(20px);
+    width: rem(15px);
+    height: rem(15px);
+}
+
+.modal__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+  
+.modal__btn {
+    padding: 10px;
+    background-color: aquamarine;
+    margin-right: rem(10px);
+    transition: 0.3s;
+    
+    &:hover {
+        background-color: darken($color: aquamarine, $amount: 10%);
+    }
+    
+    &:last-child {
+        margin-right: 0;
+    }
+}

@@ -1,0 +1,36 @@
+// setups
+@import "variables";
+@import "mixins";
+@import "media";
+@import "common";
+
+
+
+// normalize
+@import "normalize.css";
+
+// fonts 
+@import "fonts";
+
+// blocks
+@import "../scss/blocks/hero.scss";
+@import "../scss/blocks/header.scss";
+@import "../scss/blocks/menu.scss";
+@import "../scss/blocks/btn.scss";
+@import "../scss/blocks/section-title.scss";
+@import "../scss/blocks/down-arrow.scss";
+@import "../scss/blocks/best.scss";
+@import "../scss/blocks/feature.scss";
+@import "../scss/blocks/burgers.scss";
+@import "../scss/blocks/accordeon.scss";
+@import "../scss/blocks/team.scss";
+@import "../scss/blocks/menu-block.scss";
+@import "../scss/blocks/reviews.scss";
+@import "../scss/blocks/review.scss";
+@import "../scss/blocks/HowWork.scss";
+@import "../scss/blocks/form.scss";
+@import "../scss/blocks/contacts.scss";
+@import "../scss/blocks/footer.scss";
+@import "../scss/blocks/page-nav.scss";
+@import "../scss/blocks/hamburger-menu.scss";
+@import "../scss/blocks/overlay";

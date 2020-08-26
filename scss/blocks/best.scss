@@ -1,0 +1,25 @@
+.best {
+    background: url("../images/best/section2_best.jpg") center center / cover no-repeat;
+}
+.best__list {
+    display: flex;
+
+    @include phones {
+       flex-direction: column; 
+    }
+}
+
+.best__item {
+    flex: 1;
+    margin-right: rem(10px);
+    margin-bottom: rem(30px);
+
+    @include phones {
+        flex-direction: row;
+        display: flex;
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+}

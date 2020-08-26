@@ -1,0 +1,155 @@
+.form {
+    background: url("../images/form/section8_form.jpg") center center / cover no-repeat;
+}
+
+.information {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    @include tablets {
+        margin-left: 0;
+        flex-direction: column;
+        padding: 0 15%;
+    }
+
+    @include phones {
+        padding: 0;
+    }
+}
+
+.form__label {
+    display: block;
+}
+
+.form__control {
+    display: block;
+    width: 100%;
+    outline: none;
+    border: 1px solid #d1cfcb;
+    background-color: $white;
+    border-radius: 3px;
+    padding: 6px 20px;
+    overflow: auto;
+    font-size: rem(14px);
+    line-height: 1.2;
+    max-width: 100%;
+    resize: none;
+}
+
+.form__control:hover {
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.4);
+}
+
+.form__control:focus {
+    border-color: #f9b43b;
+}
+
+.form__control:active {
+    border: 2px solid #f9b43b;
+}
+
+.form__actions {
+    background: #aaa;
+    padding: rem(15px);
+}
+
+label {
+    color: $white;
+    font-family: "Ubuntu";
+    font-size: rem(14px);
+    font-weight: 300;
+    line-height: rem(24px);
+}
+
+.row-1,
+.row-3,
+.row-4,
+.form__btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.row-4,
+.form__btn {
+    justify-content: flex-start;
+
+    @include phones {
+        padding-top: 7%;
+        justify-content: center;
+    }
+}
+
+.form__information {
+    width: 50%;
+
+    @include tablets {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+.rows {
+    padding-bottom: 3%;
+    width: 95%;
+
+    @include tablets {
+        width: 100%;
+    }
+}
+
+.form__group {
+    padding-right: 3%;
+    flex: 1;
+    display: block;
+}
+
+.form__note {
+    height: rem(70px);
+}
+
+.row-4 {
+    padding-top: 2%;
+}
+
+.form__btn {
+    padding-top: 3%;
+
+    @include phones {
+        padding-top: 7%;
+        text-align: center;
+    }
+}
+
+.radio__cash {
+    padding-left: 5%;
+    white-space: nowrap;
+}
+
+.checkbox {
+    padding-top: 3%;
+
+    @include phones {
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 7%;
+    }
+}
+
+.order__form {
+    @include phones {
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+input, label {
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+.radio__cash input, .radio__cash label {
+    vertical-align: middle;
+}

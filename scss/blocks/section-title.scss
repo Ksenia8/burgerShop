@@ -1,0 +1,90 @@
+.section-title {
+    font-size: rem(72px);
+    font-family: "Gagalin";
+    font-weight: 400;
+    margin-bottom: rem(45px);
+    line-height: 1;
+    color: $orange;
+
+    @include phones {
+        font-size: rem(45px);
+        margin: 5% 0;
+    }
+
+    &--color-black {
+        color: #000;
+    }
+
+    &--centered {
+        text-align: center;
+        padding-top: 12%; 
+    }
+
+    &--hero {
+        margin-bottom: rem(30px); 
+
+        @include landscape {
+            font-size: rem(55px);
+            margin: 5% 0;
+        }
+
+        @include tablets {
+            font-size: rem(60px);
+        }
+
+        @include phones {
+            font-size: rem(54px);
+        }
+    }
+
+    &--form {
+        padding-top: rem(80px);
+        text-align: center;
+    }
+
+    &__team {
+        padding-top: 16%;
+        padding-left: 14%;
+
+        @include tablets {
+            font-size: rem(80px);
+            padding-top: 5%;
+            text-align: center;
+        }
+
+        @include phones {
+            font-size: rem(60px);
+            padding-top: 3%;
+            
+            padding-bottom: 5%;
+            padding-left: 0;
+            margin: 0 auto;
+        }
+    }
+
+    &--menu {
+        color: $white;
+    }
+
+    &--burger {
+        font-family: "Gagalin";
+        font-size: rem(72px);
+        font-weight: 400;
+        line-height: rem(63.93px);
+        color: $white;
+
+        @include landscape {
+            font-size: rem(55px);
+            margin: 5% 0;
+        }
+
+        @include tablets {
+            font-size: rem(60px);
+        }
+
+        @include phones {
+            font-size: rem(54px);
+            text-align: center;
+        }
+    }
+}

@@ -1,0 +1,166 @@
+.hamburger-menu-link-item {
+	vertical-align: middle;
+	position: relative;
+	height: rem(22px);
+	align-items: center;
+	margin-left: rem(30px);
+    display: none;
+    
+	@include landscape {
+		display: flex;
+	}
+}
+
+.nav-main {
+	display: flex;
+	margin-top: rem(5px);
+}
+  
+.nav-main__list {
+	justify-content: center;
+	flex-wrap: wrap;
+	display: flex;
+	align-items: center;
+}
+  
+.nav-main__item {
+	margin-left: rem(27px);
+}
+  
+.nav-main__item:first-child {
+	margin-left: 0;
+}
+  
+.nav-main__link {
+	font-size: rem(18px);
+	color: #ffffff;
+	transition: 0.5s;
+  
+	&:hover {
+	  color: darken(#fff, 10%);
+	}
+}
+  
+.hamburger-menu-link {
+	vertical-align: middle;
+	position: relative;
+	height: rem(22px);
+	align-items: center;
+	bottom: rem(25px);
+	margin-top: rem(20px);
+	display: none;
+	z-index: 1000;
+  
+	@include landscape {
+		display: flex;
+	}
+  
+	span {
+		display: block;
+		position: absolute;
+		width: rem(24px);
+		height: rem(4px);
+		background: $white;
+		border-radius: rem(3px);
+		opacity: 1;
+		left: 0;
+		transform: rotate(0deg);
+		transition: 0.3s ease-in-out;
+	}
+  
+	span:nth-child(1) {
+		top: 0;
+	}
+  
+	span:nth-child(2) {
+		top: rem(9px);
+	}
+  
+	span:nth-child(3) {
+		top: rem(18px);
+	}
+  
+	&.open span:nth-child(1) {
+		top: rem(9px);
+		transform: rotate(135deg);
+	}
+  
+	&.open span:nth-child(2) {
+		opacity: 0;
+		background: white;
+		left: rem(-30px);
+	}
+  
+	&.open span:nth-child(3) {
+		top: rem(9px);
+		transform: rotate(-135deg);
+	}
+}
+  
+.hamburger-overlay {
+	z-index: 999;
+	visibility: hidden;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	overflow: hidden;
+	opacity: 0;
+	height: 0;
+	background-color: rgba(32, 31, 31, 0.8);
+	transition: opacity 0.5s, visibility 0.5s, height 0.5s;
+  
+	&.active {
+		opacity: 1;
+		visibility: visible;
+		height: 100%;
+  
+		.nav-main__item {
+			@for $i from 1 to 8 {
+				&:nth-child(#{$i}) {
+				animation: scale calc(0.2s + #{$i}s / 6) linear;
+				}
+			}
+		}
+	}
+  
+	&__menu {
+		height: 100%;
+	}
+	
+	.nav-main {
+		display: flex;
+		margin: 0;
+		height: 100%;
+	}
+  
+	.nav-main__list {
+		width: 100%;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: nowrap;
+	}
+	
+	.nav-main__item {
+		margin-left: 0;
+		margin-bottom: rem(30px);
+	
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	
+	.nav-main__link {
+		font-size: rem(24px);
+		font-weight: 400;
+		font-family: "Ubuntu";
+		text-decoration: none;
+		
+		&:hover {
+			// font-size: rem(28px);
+			color: $orange;
+			font-weight: 700;
+		}
+	}
+}
